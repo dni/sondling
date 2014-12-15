@@ -136,6 +136,8 @@ module.exports = (grunt)->
           "text.js": 'requirejs-text/text.js'
           "tpl.js": 'requirejs-tpl/tpl.js'
           "cs.js": 'require-cs/cs.js'
+          "googlemaps.js": 'googlemaps-amd/src/googlemaps.js'
+          "async.js": 'requirejs-plugins/src/async.js'
           "i18n.js": 'requirejs-i18n/i18n.js'
           "coffee-script.js": 'coffee-script/extras/coffee-script.js'
           "notify.js": "notifyjs/dist/notify-combined.min.js"

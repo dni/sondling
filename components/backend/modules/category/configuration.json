@@ -1,0 +1,21 @@
+{
+    "name": "CategoryModule",
+    "moduleName": "CategoryModule",
+    "modelName": "Category",
+    "collectionName": "Categories",
+    "url": "/categories/",
+    "urlRoot": "categories",
+    "dbTable": "categories",
+    "navigation": true,
+    "notpublishable": true,
+    "model": {
+        "title" : {
+          "type": "text",
+          "required": true,
+          "mongooseType": "String"
+        },
+        "color" : {
+          "type": "color"
+        }
+    }
+}

@@ -31,7 +31,8 @@
     "requirejs": "latest",
     "notifyjs": "latest",
     "coffee-script": "~1.7.1",
-    "almond": "~0.2.9"
+    "almond": "~0.2.9",
+    "googlemaps-amd": "~1.0.1"
   },
   "devDependencies": {}
 }

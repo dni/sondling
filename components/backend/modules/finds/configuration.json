@@ -1,0 +1,26 @@
+{
+  "moduleName": "FindsModule",
+  "name": "FindsModule",
+  "modelName": "Find",
+  "collectionName": "Finds",
+  "url": "/finds/",
+  "urlRoot": "finds",
+  "dbTable": "finds",
+  "navigation": true,
+  "notpublishable": true,
+  "model": {
+    "title" : {
+      "type": "text"
+    },
+    "lat" : {
+      "type": "text"
+    },
+    "lng" : {
+      "type": "text"
+    },
+    "category" : {
+      "type": "select",
+      "collection": "Categories"
+    }
+  }
+}
