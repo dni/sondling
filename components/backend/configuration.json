@@ -5,7 +5,8 @@
     "cs!modules/files/FileModule",
     "cs!modules/user/UserModule",
     "cs!modules/messages/MessageModule",
-    "cs!modules/category/CategoryModule",
-    "cs!modules/finds/FindsModule"
+    "cs!modules/map/MapModule",
+    "cs!modules/finds/FindsModule",
+    "cs!modules/category/CategoryModule"
   ]
 }
