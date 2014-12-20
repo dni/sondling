@@ -2,15 +2,10 @@ define [
     'cs!App'
     'cs!Publish'
     'cs!utilities/Utilities'
-    'cs!../view/MapView'
     'cs!modules/files/view/RelatedFileView'
-], ( App, Publish, Utilities, ListView, FileView ) ->
+], ( App, Publish, Utilities, FileView ) ->
 
   class FindsController extends Publish.Controller.LayoutController
-
-    initialize:->
-      App.vent.on "FindsModule:collection:ready", =>
-        App.mapRegion.show new ListView collection: App.Finds
 
     RelatedViews:
       fileView: FileView

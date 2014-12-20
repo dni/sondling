@@ -1,0 +1,7 @@
+{
+  "moduleName": "MapModule",
+  "name": "MapModule",
+  "modelName": "Map",
+  "navigation": true,
+  "notpublishable": true
+}
