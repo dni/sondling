@@ -1,5 +1,5 @@
 # The Ultimate Treasure Tracking App
-Still under heavy development, funded by (detectorix)[http://www.metalldetektor-austria.at/] developed by (dni)[https://github.com/dni]
+Still under heavy development, funded by [detectorix](http://www.metalldetektor-austria.at/) developed by [dni](https://github.com/dni)
 
 # This is a Fork of Publish! CMS
 A lightweight opensource Javascript Content Managment System, which allows Users to easily publish any Content on any channels!
