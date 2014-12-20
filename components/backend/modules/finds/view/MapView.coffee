@@ -30,7 +30,6 @@ define [
 
   class ListView extends Marionette.CollectionView
     childView: ListItemView
-    id: "map"
     initialize:->
       if navigator.geolocation
         navigator.geolocation.getCurrentPosition (position)->
@@ -40,8 +39,8 @@ define [
             position: pos,
           map.setCenter(pos)
       @$el.css
-        height: '800px'
-        width: '800px'
+        height: '100%'
+        width: '100%'
       map = new g.Map @el,
         zoom:3
         mapTypeId: g.MapTypeId.HYBRID

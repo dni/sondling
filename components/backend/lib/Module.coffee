@@ -19,6 +19,7 @@ define [
         i18n: @i18n
         Config: @Config
 
+      @Controller.initialize?()
       # collection
       if @Config.collectionName
         App[@Config.collectionName] = new @Controller.Collection

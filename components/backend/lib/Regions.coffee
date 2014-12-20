@@ -18,6 +18,7 @@ define [
     overlayRegion: "#overlay"
     listTopRegion: "#list-top"
     listRegion:"#list"
+    mapRegion:"#map"
 
   # close detailview if now listview is shown
   App.listRegion.on "show", ->

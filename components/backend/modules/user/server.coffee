@@ -12,7 +12,7 @@ module.exports.setup = (app, config)->
     res.sendfile process.cwd()+'/components/backend/login.html'
 
   app.post '/login', passport.authenticate('local', failureRedirect: '/login'), (req, res)->
-    res.redirect '/admin'
+    res.redirect '/'
 
   app.get '/logout', (req, res)->
     req.logout()
@@ -26,7 +26,7 @@ module.exports.setup = (app, config)->
     if count == 0
       admin = utils.createModel User, config
 
-      admin.setFieldValue 
+      admin.setFieldValue
         'email': "admin@publish.org"
         'username': "admin"
         'password': "password"
