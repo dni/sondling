@@ -37,7 +37,20 @@ define [
       map = new App.google.Map @el,
         zoom:3
         mapTypeId: App.google.MapTypeId.HYBRID
-        # disableDefaultUI: true
+        disableDefaultUI: true
+        mapTypeControl: false
+        panControl: true
+        panControlOptions:
+          position: App.google.ControlPosition.RIGHT_BOTTOM
+        zoomControl: true,
+        zoomControlOptions:
+          style: App.google.ZoomControlStyle.LARGE,
+          position: App.google.ControlPosition.RIGHT_BOTTOM
+        scaleControl: true
+        scaleControlOptions:
+          position: App.google.ControlPosition.RIGHT_BOTTOM
+        streetViewControl: false
+
       marker = new App.google.Marker
         map: map,
         position: pos
