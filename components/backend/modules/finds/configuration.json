@@ -13,10 +13,10 @@
       "type": "text"
     },
     "lat" : {
-      "type": "text"
+      "type": "hidden"
     },
     "lng" : {
-      "type": "text"
+      "type": "hidden"
     },
     "category" : {
       "type": "select",

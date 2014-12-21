@@ -11,5 +11,6 @@ define [
         App.mapRegion.show new MapView collection: App.Finds
     list: ->
       App.listRegion.empty()
+      App.contentRegion.empty()
       App.listTopRegion.show new @TopView
         navigation: @i18n.navigation

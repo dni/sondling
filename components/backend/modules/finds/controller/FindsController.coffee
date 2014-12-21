@@ -3,11 +3,13 @@ define [
     'cs!Publish'
     'cs!utilities/Utilities'
     'cs!modules/files/view/RelatedFileView'
-], ( App, Publish, Utilities, FileView ) ->
+    'cs!modules/map/view/RelatedMapView'
+], ( App, Publish, Utilities, FileView, MapView) ->
 
   class FindsController extends Publish.Controller.LayoutController
 
     RelatedViews:
+      mapView: MapView
       fileView: FileView
 
 #     list: ->
