@@ -19,16 +19,16 @@ define [
       @destroyMarker()
       @createMarker()
     createMarker:->
-      @category = App.Categories.findWhere _id: @model.getValue 'category'
-      color = @category.getValue("color")
+      category = App.Categories.findWhere _id: @model.getValue 'category'
+      subcategory = App.Subcategories.findWhere _id: @model.getValue 'subcategory'
       @infoWindow = new App.google.InfoWindow content: @template @model.toJSON()
       @marker = new App.google.Marker
         map: map
         position: @latlng()
         icon:
-          strokeColor: color
-          path:App.google.SymbolPath.CIRCLE
-          scale: 4
+          strokeColor: category.getValue("color")
+          path:App.google.SymbolPath[subcategory.getValue("symbol")]
+          scale: parseInt(subcategory.getValue("size"))
       that = @
       @listener = App.google.event.addListener @marker, 'click', ->
         that.infoWindow.open map, that.marker

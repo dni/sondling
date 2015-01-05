@@ -8,6 +8,12 @@ define({
     "attributes": {
         "title": "Titel",
         "category": "Kategorie",
+        "subcategory": "Subkategorie",
+        "detector": "Detektor",
+        "type": "Fundtyp",
+        "date": "Fundatum",
+        "description": "Beschreibung",
+        "place": "Aufbewahrungsort",
         "lng": "Longitude",
         "lat": "Latitude"
     }

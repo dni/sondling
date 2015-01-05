@@ -8,9 +8,25 @@
   "dbTable": "finds",
   "navigation": true,
   "notpublishable": true,
+  "settings": {
+    "detector" : {
+      "value": "DeusXP, Minelab Safari, Garret 350",
+      "type": "text"
+    },
+    "type" : {
+      "value": "Münze, Beil, Kreuzer, Waffe",
+      "type": "text"
+    }
+  },
   "model": {
     "title" : {
       "type": "text"
+    },
+    "date" : {
+      "type": "date"
+    },
+    "description" : {
+      "type": "wysiwyg"
     },
     "lat" : {
       "type": "hidden"
@@ -18,9 +34,24 @@
     "lng" : {
       "type": "hidden"
     },
+    "place": {
+      "type": "text"
+    },
     "category" : {
       "type": "select",
       "collection": "Categories"
+    },
+    "subcategory" : {
+      "type": "select",
+      "collection": "Subcategories"
+    },
+    "type" : {
+      "type": "select",
+      "setting": "type"
+    },
+    "detector" : {
+      "type": "select",
+      "setting": "detector"
     }
   }
 }

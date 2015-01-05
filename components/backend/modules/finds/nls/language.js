@@ -5,6 +5,12 @@ define({
     "attributes":  {
       "title": "Title",
       "category": "Category",
+      "subcategory": "Subcategory",
+      "detector": "Detector",
+      "type": "Find Type",
+      "date": "Find date",
+      "description": "Description",
+      "place": "Place of storage",
       "lng": "Longitude",
       "lat": "Latitude"
     },

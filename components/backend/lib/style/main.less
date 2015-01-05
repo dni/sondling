@@ -89,14 +89,7 @@ img {
 
 #list, #list-top, #content > * {
   padding:24px;
-  background:rgba(200,200,200, 0.9);
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(243,243,243,1)), color-stop(51%,rgba(237,237,237,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
-  background: linear-gradient(135deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(243, 243, 243, 0.85) 50%, rgba(237, 237, 237, 0.85) 51%, rgba(255, 255, 255, 0.43) 100%);
 }
 #list:empty, #list-top:empty {background:transparent}
 
@@ -174,9 +167,11 @@ pre ::selection {background:rgb(255,255,255);color:black;}
 .info {padding:5%;}
 
 .buttons, .buttons-top, .page {.btn {margin-left:6px;}}
-.buttons {text-align:right;margin-top:24px;}
-.buttons-top {text-align:right;margin-bottom:12px;}
-
+.buttons-top {
+  position: absolute;
+  right: 41px;
+  top: 30px;
+}
 footer {padding-left:2%;color:white;}
 footer a {color:#008000;}
 
