@@ -5,12 +5,21 @@ define [
 ], (App, Marionette, Template) ->
 
   map = ''
-
   class ListItemView extends Marionette.ItemView
     template: Template
-    initialize:->
-      @category = App.Categories.findWhere _id: @model.getValue 'category'
+    modelEvents:
+      "change": "updateMarker"
+      "destroy": "destroyMarker"
     render: ->
+      @createMarker()
+    destroyMarker:->
+      @marker.setMap null
+      App.google.event.removeListener @listener
+    updateMarker:->
+      @destroyMarker()
+      @createMarker()
+    createMarker:->
+      @category = App.Categories.findWhere _id: @model.getValue 'category'
       color = @category.getValue("color")
       @infoWindow = new App.google.InfoWindow content: @template @model.toJSON()
       @marker = new App.google.Marker
@@ -21,16 +30,14 @@ define [
           path:App.google.SymbolPath.CIRCLE
           scale: 4
       that = @
-      App.google.event.addListener @marker, 'click', ->
+      @listener = App.google.event.addListener @marker, 'click', ->
         that.infoWindow.open map, that.marker
-
     latlng: ->
       new App.google.LatLng @model.getValue('lat'), @model.getValue('lng')
 
   class ListView extends Marionette.CollectionView
     childView: ListItemView
     initialize:->
-      pos = new App.google.LatLng App.position.coords.latitude, App.position.coords.longitude
       @$el.css
         height: '100%'
         width: '100%'
@@ -50,10 +57,15 @@ define [
         scaleControlOptions:
           position: App.google.ControlPosition.RIGHT_BOTTOM
         streetViewControl: false
-
-      marker = new App.google.Marker
-        map: map,
-        position: pos
+      pos = new App.google.LatLng App.position.coords.latitude, App.position.coords.longitude
       map.setCenter(pos)
+      setInterval ->
+        marker?.setMap null
+        App.getCurrentPosition()
+        pos = new App.google.LatLng App.position.coords.latitude, App.position.coords.longitude
+        marker = new App.google.Marker
+          map: map,
+          position: pos
+      , 2000
 
   return ListView
