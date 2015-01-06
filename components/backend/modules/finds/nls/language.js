@@ -9,6 +9,7 @@ define({
       "detector": "Detector",
       "type": "Find Type",
       "date": "Find date",
+      "teaserimage": "Teaserimage",
       "description": "Description",
       "place": "Place of storage",
       "lng": "Longitude",

@@ -13,6 +13,7 @@ define({
         "type": "Fundtyp",
         "date": "Fundatum",
         "description": "Beschreibung",
+        "teaserimage": "Vorschaubild",
         "place": "Aufbewahrungsort",
         "lng": "Longitude",
         "lat": "Latitude"

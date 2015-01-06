@@ -1,0 +1,30 @@
+{
+  "moduleName": "FindsiteModule",
+  "name": "FindsiteModule",
+  "modelName": "Findsite",
+  "collectionName": "Findsite",
+  "url": "/findsite/",
+  "urlRoot": "findsite",
+  "dbTable": "findsite",
+  "navigation": true,
+  "notpublishable": true,
+  "model": {
+    "title" : {
+      "type": "text"
+    },
+    "category" : {
+      "type": "select",
+      "collection": "Categories"
+    },
+    "description" : {
+      "type": "wysiwyg"
+    },
+    "teaserimage" : {
+      "type": "file",
+      "multiple": false
+    },
+    "polygon" : {
+      "type": "hidden"
+    }
+  }
+}

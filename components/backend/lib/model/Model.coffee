@@ -18,7 +18,7 @@ define [
 
     getValue: (fieldname)->
       fields = @get "fields"
-      return fields[fieldname].value
+      return fields[fieldname]?.value
 
     togglePublish: ->
       @.set "published", not @.get "published"

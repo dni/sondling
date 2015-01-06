@@ -30,8 +30,7 @@ define [
       notpublishable: @notpublishable
       Config: @options.Config
       t: @options.i18n
-      checkCondition: (condition)->
-        @[condition]()
+      checkCondition: (condition) -> @[condition]()
       isPrint:->
         setting = App.Settings.findSetting "MagazineModule"
         setting.getValue 'print'

@@ -25,6 +25,10 @@
     "date" : {
       "type": "date"
     },
+    "teaserimage" : {
+      "type": "file",
+      "multiple": false
+    },
     "description" : {
       "type": "wysiwyg"
     },

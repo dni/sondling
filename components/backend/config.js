@@ -1,5 +1,10 @@
 require.config({
   baseUrl: 'vendor',
+  googlemaps: {
+    params: {
+      libraries: 'drawing'
+    }
+  },
   paths: {
     lib: '../lib',
     utilities: '../utilities',

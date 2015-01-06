@@ -8,7 +8,7 @@ define [
   class MapController extends Publish.Controller.Controller
     initialize:->
       App.vent.on "ready", =>
-        App.mapRegion.show new MapView collection: App.Finds
+        App.mapRegion.show new MapView
     list: ->
       App.listRegion.empty()
       App.contentRegion.empty()
