@@ -32,6 +32,9 @@ define [
         App.google.event.trigger that.map, 'resize'
       , 500
       App.google.event.addListener marker, 'dragend', (e)->
+        parentContainer = that.$el.parent().parent().parent().parent()
         that.model.setValue 'lat', e.latLng.lat()
         that.model.setValue 'lng', e.latLng.lng()
         that.model.save()
+        parentContainer.find('[name=lat]').val e.latLng.lat()
+        parentContainer.find('[name=lng]').val e.latLng.lng()

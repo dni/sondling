@@ -3,8 +3,9 @@ define [
   'marionette'
   'cs!./MapFindsView'
   'cs!./MapFindsiteView'
+  'cs!./MapTrackView'
   'tpl!../templates/map.html'
-], (App, Marionette, MapFindsView, MapFindsiteView, Template) ->
+], (App, Marionette, MapFindsView, MapFindsiteView, MapTrackView, Template) ->
 
   App.map = ''
   class MapView extends Marionette.ItemView
@@ -50,7 +51,9 @@ define [
     initChildren:->
       @findView = new MapFindsView collection: App.Finds
       @$el.append @findView.render().el
-      @findsiteView = new MapFindsiteView collection: App.Findsite
+      @findsiteView = new MapFindsiteView collection: App.Findsites
       @$el.append @findsiteView.render().el
+      @trackView = new MapTrackView collection: App.Tracks
+      @$el.append @trackView.render().el
 
   return MapView

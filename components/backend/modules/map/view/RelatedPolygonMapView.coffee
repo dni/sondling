@@ -7,7 +7,6 @@ define [
 
   class RelatedPolygonMapView extends Marionette.ItemView
     render:(args)->
-
       @category = App.Categories.findWhere _id: @model.getValue 'category'
       that = @
       @$el.css
@@ -46,6 +45,7 @@ define [
           polygon = polygonArray.map (point)->
             point.toUrlValue()
           that.model.setValue "polygon", polygon.join(";")
+          that.$el.parent().parent().parent().parent().find('[name=polygon]').val polygon.join(';')
           that.model.save()
       @map.setCenter(@pos)
       # needsresize else it wont have displaybugs

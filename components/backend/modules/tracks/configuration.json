@@ -1,0 +1,16 @@
+{
+  "moduleName": "TracksModule",
+  "name": "TracksModule",
+  "modelName": "Track",
+  "collectionName": "Tracks",
+  "url": "/tracks/",
+  "urlRoot": "tracks",
+  "dbTable": "tracks",
+  "navigation":true,
+  "notpublishable": true,
+  "model": {
+    "track" : {
+      "type": "hidden"
+    }
+  }
+}

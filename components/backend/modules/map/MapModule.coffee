@@ -23,6 +23,7 @@ define [
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition (position)->
         App.position = position
+    App.vent.trigger 'newPosition'
 
   App.getCurrentPosition()
 
